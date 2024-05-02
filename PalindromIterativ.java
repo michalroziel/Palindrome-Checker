@@ -6,6 +6,8 @@ public class PalindromIterativ implements Palindrom {
     @Override
     public boolean istPalindrom(String wort) {
 
+        System.out.println("Starting the iterative approach..");
+
         //make the checker case-insensitive
         String wordToCheck = wort.toLowerCase();
 
@@ -17,7 +19,7 @@ public class PalindromIterativ implements Palindrom {
                                                                             // correct Index 
             if (wordToCheck.charAt(i) != wordToCheck.charAt(wordToCheck.length() - 1 - i )){
 
-                System.out.println(" This is not a palindrome! " );
+                System.out.println("This is not a palindrome! " );
                 return false ; 
 
             }    

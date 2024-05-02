@@ -20,6 +20,9 @@ public class Main{
 
         myPalindromIterativ.istPalindrom(wordToCheck);
 
+        PalindromRekursiv myRec = new PalindromRekursiv();
+        myRec.istPalindrom(wordToCheck);
+
     }
 
 
