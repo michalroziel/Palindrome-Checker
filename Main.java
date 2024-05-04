@@ -7,7 +7,7 @@ public class Main{
 
 
     public static void main(String[] args ){
-        System.out.println("Hello World ! " );
+       
         System.out.println("Please Enter the word to check whether its a Palindrome \n ");
 
         // scanner to receive user input 
