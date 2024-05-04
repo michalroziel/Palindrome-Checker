@@ -6,20 +6,20 @@ public class PalindromRekursiv implements Palindrom {
         //TODO: check for edge cases  
         
         
-        System.out.println("The word length is : " + wort.length());
+        System.out.println("[REC. Approach:]The word length is : " + wort.length());
         // make the word case-insensitive
         wort = wort.toLowerCase();
 
         // base case : word is one letter or less
          if (wort.length() <= 1 ){
-            System.out.println("This is a palindrome ! ");
+            System.out.println("[REC. Approach:]This is a palindrome! \n ");
             return true ; 
         }
         
         //check first and last letter
         else if ( wort.charAt(0) != wort.charAt(wort.length()-1) ){
 
-            System.out.println(" his is not a palindrome! " );
+            System.out.println("[REC. Approach:]This is not a palindrome! " );
             return false;
         }
 
