@@ -6,7 +6,10 @@ public class PalindromIterativ implements Palindrom {
     @Override
     public boolean istPalindrom(String wort) {
 
-        System.out.println("Starting the iterative approach..\n");
+       // System.out.println("Starting the iterative approach..\n");
+        long timeStart = System.nanoTime();
+        long timeEndFalse;
+        long timePeriod;
 
         //make the checker case-insensitive
         String wordToCheck = wort.toLowerCase();
@@ -19,14 +22,30 @@ public class PalindromIterativ implements Palindrom {
                                                                             // correct Index 
             if (wordToCheck.charAt(i) != wordToCheck.charAt(wordToCheck.length() - 1 - i )){
 
-                System.out.println("This is not a palindrome!\n " );
+             //   System.out.println("This is not a palindrome!\n " );
+
+                timeEndFalse = System.nanoTime();
+                timePeriod = (timeEndFalse - timeStart)  ;
+               // System.out.println("time in nanoseconds it took for this NOT palindrome:" + timePeriod);
+                System.out.println("" + timePeriod);
+
+
                 return false ; 
 
             }    
 
         }
 
-        System.out.println("This is a palindrome !\n ");
+      //  System.out.println("This is a palindrome !\n ");
+
+        long timeEndTrue = System.nanoTime();
+        timePeriod = ( timeEndTrue - timeStart );
+       // System.out.println("time in nanoseconds it took for this palindrome: " + timePeriod);
+        System.out.println("" + timePeriod);
+
+
+
+
         return true ; 
 
 
