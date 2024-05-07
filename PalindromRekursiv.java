@@ -3,18 +3,18 @@ public class PalindromRekursiv implements Palindrom {
     @Override
     public boolean istPalindrom(String wort) {
 
-    long timeStart = System.nanoTime();
+   // long timeStart = System.nanoTime();
      
     boolean checkIfPali;
     checkIfPali = istPalindromHelper(wort);
 
-    long timeEnd = System.nanoTime();
+    //long timeEnd = System.nanoTime();
 
     //compute time in ms
-    long timePeriod = (timeEnd - timeStart) ;
+   // long timePeriod = (timeEnd - timeStart) ;
 
       //  System.out.println("time in nanoseconds it took to check this word :" + timePeriod);
-        System.out.println("" + timePeriod);
+        //System.out.println("" + timePeriod);
 
         return checkIfPali;
 
