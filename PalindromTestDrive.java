@@ -7,7 +7,8 @@ public class PalindromTestDrive {
         PalindromIterativ myIterativ = new PalindromIterativ();
         PalindromRekursiv myRekursiv = new PalindromRekursiv();
 
-        try (BufferedReader br = new BufferedReader(new FileReader("resources.csv")); BufferedWriter bw = new BufferedWriter(new FileWriter("plotter/measurements.csv"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("pal.csv")); BufferedWriter bw =
+                new BufferedWriter(new FileWriter("plotter/measurements.csv"))) {
             String line;
             System.out.println("Now reading out words from rescources.csv\n");
             while ((line = br.readLine()) != null) { // Read each line in the file
