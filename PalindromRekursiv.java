@@ -22,13 +22,9 @@ public class PalindromRekursiv implements Palindrom {
     
     public boolean istPalindromHelper(String wort){
 
-        //TODO: check for edge cases
-
-
 
        // System.out.println("[REC. Approach:]The word length is : " + wort.length());
-        // make the word case-insensitive
-        wort = wort.toLowerCase();
+
 
         // base case : word is one letter or less
         if (wort.length() <= 1 ){

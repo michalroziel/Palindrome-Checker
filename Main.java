@@ -28,7 +28,7 @@ public class Main{
 
         try (BufferedReader br = new BufferedReader(new FileReader("/Users/michalroziel/Documents/htwprog/Palindrome-Checker/resources.csv"))) {
             String line;
-            System.out.println("Now reading out words from rescources.csv\n");
+            System.out.println("Now reading out words from resources.csv\n");
             while ((line = br.readLine()) != null) { // Read each line in the file
                 System.out.println("Read line: \n" + line ); // Process or output the line
                 System.out.println("Using the Iterative approach on read line!" );

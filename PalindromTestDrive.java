@@ -3,35 +3,34 @@ import java.io.*;
 public class PalindromTestDrive {
 
     public static void main(String[] args) {
-        
+
         PalindromIterativ myIterativ = new PalindromIterativ();
         PalindromRekursiv myRekursiv = new PalindromRekursiv();
 
-        try (BufferedReader br = new BufferedReader(new FileReader("pal.csv")); BufferedWriter bw =
-                new BufferedWriter(new FileWriter("plotter/measurements.csv"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("pal.csv")); BufferedWriter bw = new BufferedWriter(new FileWriter("plotter/measurements.csv"))) {
             String line;
-            System.out.println("Now reading out words from rescources.csv\n");
+            System.out.println("Now reading out words from resources.csv\n");
             while ((line = br.readLine()) != null) { // Read each line in the file
-                System.out.println("" + line ); // Process or output the line
-               // System.out.println("Using the Iterative approach on read line!" );
+                System.out.println("" + line); // Process or output the line
+                // System.out.println("Using the Iterative approach on read line!" );
+
+                String wordToCheck = line.toLowerCase().trim();
 
                 long timeStartIterativ = System.nanoTime();
-                myIterativ.istPalindrom(line);
+                myIterativ.istPalindrom(wordToCheck);
                 long timeEndIterativ = System.nanoTime();
-                long timePeriodIterativ = (timeEndIterativ - timeStartIterativ) ;
+                long timePeriodIterativ = (timeEndIterativ - timeStartIterativ);
 
                 long timeStartRekursiv = System.nanoTime();
-                myRekursiv.istPalindrom(line);
+                myRekursiv.istPalindrom(wordToCheck);
                 long timeEndRekursiv = System.nanoTime();
-                long timePeriodRekursiv = (timeEndRekursiv - timeStartRekursiv) ;
+                long timePeriodRekursiv = (timeEndRekursiv - timeStartRekursiv);
 
-                bw.write(line.length() + "," + timePeriodIterativ + "," + timePeriodRekursiv + "\n");
+                bw.write(wordToCheck.length() + "," + timePeriodIterativ + "," + timePeriodRekursiv + "\n");
 
             }
 
-        }
-
-        catch(IOException ioEx){
+        } catch (IOException ioEx) {
             System.out.println("IOException Found ");
             ioEx.printStackTrace();
 
@@ -47,5 +46,5 @@ public class PalindromTestDrive {
 
 
     }
-    
+
 }
